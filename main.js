@@ -10,6 +10,12 @@ if (notes) {
 
 addBtn.addEventListener('click', () => addNewNote())
 
+
+
+
+
+
+
 function addNewNote(text = '  ') {
 
     const note = document.createElement('div')
@@ -52,6 +58,43 @@ function addNewNote(text = '  ') {
         }
     })
 
+    boldBtn.addEventListener('click', () => {
+
+        main.innerHTML = "<b>" + text + "</b>";
+
+    })
+
+    italicBtn.addEventListener('click', () => {
+
+        main.innerHTML = "<i>" + text + "</i>";
+
+    })
+
+
+    underlineBtn.addEventListener('click', () => {
+
+        main.innerHTML = "<u>" + text + "</u>";
+
+    })
+
+
+
+
+
+
+
+
+
+    copyBtn.addEventListener('click', () => {
+        alert('copying')
+        const editBoxRange = document.createRange();
+        editBoxRange.selectNodeContents(main);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(editBoxRange);
+        document.execCommand("copy");
+
+    })
 
     editBtn.addEventListener('click', () => {
 
