@@ -61,12 +61,16 @@ function addNewNote(text = '  ') {
     boldBtn.addEventListener('click', () => {
 
         main.innerHTML = "<b>" + text + "</b>";
+        window.location.reload();
+
 
     })
 
     italicBtn.addEventListener('click', () => {
 
         main.innerHTML = "<i>" + text + "</i>";
+        window.location.reload();
+
 
     })
 
@@ -74,6 +78,8 @@ function addNewNote(text = '  ') {
     underlineBtn.addEventListener('click', () => {
 
         main.innerHTML = "<u>" + text + "</u>";
+
+
 
     })
 
